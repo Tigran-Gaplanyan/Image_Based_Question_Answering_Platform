@@ -24,6 +24,10 @@ def get_answer(image, text):
 
     except Exception as e:
         return str(e)
+        
+def load_image(uploaded_file):
+    if uploaded_file is not None:
+        return st.image(uploaded_file, use_column_width=True)
 
 st.title("Visual Question Answering")
 st.write("Upload an image and enter a question to get an answer.")
@@ -33,7 +37,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     uploaded_file = st.file_uploader("Upload Image", type=["jpg", "jpeg", "png"])
-    st.image(uploaded_file, use_column_width=True)
+    load_image(uploaded_file)
 
 with col2:
     question = st.text_input("Question")
