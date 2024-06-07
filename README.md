@@ -1,1 +1,2 @@
-# Image_Based_Question_Answering_Platform
+# Visual-Question-Answering-API-and-App
+Visual Question Answering API and App using ViLT, Fast API, and Streamlit.
